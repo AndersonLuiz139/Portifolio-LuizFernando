@@ -1,0 +1,13 @@
+.picture {
+  display: block;
+  overflow: hidden; 
+  border-radius: var(--r-lg);
+  background-color: var(--c-surface);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: var(--zoom, 1);
+}

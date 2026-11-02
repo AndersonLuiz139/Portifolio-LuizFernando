@@ -41,24 +41,28 @@ export const navegacao = [
 
 export const imagens = {
   hero: {
-    src: "/images/luiz-corda-naval.jpg",
+    nome: "luiz-corda-naval",
+    larguras: [640, 960],
     alt: "Luiz Fernando treinando com cordas navais em uma academia",
     posicao: "30% 18%",
   },
   sobre: {
-    src: "/images/luiz-retrato-medalha.jpg",
+    nome: "luiz-retrato-medalha",
+    larguras: [640, 854],
     alt: "Luiz Fernando sorrindo após uma corrida de rua, segurando a medalha de participação",
     posicao: "55% 30%",
     legenda: "Depois da linha de chegada.",
   },
   experienciaPrincipal: {
-    src: "/images/luiz-corrida-orla.jpg",
+    nome: "luiz-corrida-orla",
+    larguras: [640, 900],
     alt: "Luiz Fernando correndo em uma avenida à beira-mar, em plena passada",
     posicao: "50% 20%",
     legenda: "Movimento: treino de corrida na orla.",
   },
   experienciaApoio: {
-    src: "/images/luiz-corrida-prova.jpg",
+    nome: "luiz-corrida-prova",
+    larguras: [640, 1066],
     alt: "Luiz Fernando durante uma prova de rua de 5 km",
     posicao: "40% 70%",
   },
