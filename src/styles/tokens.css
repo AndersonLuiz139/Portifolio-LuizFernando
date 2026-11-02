@@ -1,0 +1,85 @@
+:root {
+  --c-bg: #080b12;
+  --c-surface: #101725;
+  --c-line: #1c2638;
+  --c-line-2: #2a3a55;
+  --c-blue-deep: #142d52;
+  --c-blue: #3478f6;
+  --c-blue-action: #2a6de8;
+  --c-blue-hover: #2563eb;
+  --c-blue-soft: #5b9bff;
+
+  /* Texto */
+  --c-text: #ffffff;
+  --c-text-2: #c0cadb;
+  --c-text-3: #8793a7;
+
+  /* Famílias */
+  --f-display: "Manrope", system-ui, -apple-system, sans-serif;
+  --f-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Pesos */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 800;
+
+  /* --- Escala tipográfica */
+  --fs-display: clamp(44px, 6.2vw, 92px);
+  --fs-h2: clamp(36px, 4.4vw, 60px);
+  --fs-h3: 20px;
+  --fs-lead: 18px;
+  --fs-body: 16px;
+  --fs-eyebrow: 12px;
+
+  /* Entrelinha */
+  --lh-display: 1.02;
+  --lh-h2: 1.08;
+  --lh-h3: 1.25;
+  --lh-lead: 1.6;
+  --lh-body: 1.7;
+
+  /* Tracking */
+  --ls-display: -0.03em;
+  --ls-tight: -0.02em;
+  --ls-eyebrow: 0.16em;
+  --ls-wide: 0.2em;
+
+  /* Espaçamento */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-12: 96px;
+
+  --space-section: clamp(96px, 12vw, 160px);
+
+  /* Layout */
+  --container: 1280px;
+  --gutter: clamp(20px, 5vw, 80px); /* 20 mobile · 40 tablet · 80 desktop */
+  --header-h: 88px; /* compensa o cabeçalho fixo na âncora */
+  --measure: 62ch; /* no máximo 62 caracteres por linha */
+
+  /* Raios */
+  --r-sm: 4px; /* tags */
+  --r-md: 8px; /* botões */
+  --r-lg: 12px; /* fotos */
+  --r-pill: 999px; /* pílulas */
+
+  /* Movimento  */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --t-fast: 180ms;
+  --t-reveal: 400ms;
+}
+
+/* Tablet e acima: os tamanhos menores sobem um degrau. */
+@media (min-width: 640px) {
+  :root {
+    --fs-h3: 24px;
+    --fs-lead: 20px;
+    --fs-body: 17px;
+  }
+}
