@@ -1,10 +1,10 @@
-import { hero, marca } from "./data/site.js";
+import Header from "./components/Header/Header.jsx";
 
 export default function App() {
   return (
-    <main className="container">
-      <h1>{marca.nome}</h1>
-      <p>{hero.eyebrow}</p>
-    </main>
+    <>
+      <Header />
+      <main />
+    </>
   );
 }
