@@ -1,0 +1,72 @@
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  border-radius: var(--r-md);
+  font-family: var(--f-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  line-height: 1;
+  white-space: nowrap;
+  transition:
+    background-color var(--t-fast) var(--ease),
+    border-color var(--t-fast) var(--ease),
+    color var(--t-fast) var(--ease),
+    scale var(--t-fast) var(--ease);
+}
+
+.botao:active {
+  scale: 0.985;
+}
+
+/* Tamanhos */
+
+.sm {
+  height: 44px;
+  padding-inline: var(--space-3);
+}
+
+.md {
+  height: 52px;
+  padding-inline: var(--space-4);
+}
+
+.lg {
+  height: 72px;
+  padding-inline: var(--space-6);
+  font-size: var(--fs-lead);
+}
+
+/* Primária */
+
+.primaria {
+  background-color: var(--c-blue-action);
+  color: var(--c-text);
+}
+
+.primaria:hover {
+  background-color: var(--c-blue-hover);
+}
+
+/* Secundária */
+
+.secundaria {
+  border: 1px solid var(--c-line-2);
+  color: var(--c-text-2);
+}
+
+.secundaria:hover {
+  border-color: var(--c-text-2);
+  color: var(--c-text);
+}
+
+/* Seta */
+
+.seta {
+  transition: translate var(--t-fast) var(--ease);
+}
+
+.botao:hover .seta {
+  translate: 4px 0;
+}
