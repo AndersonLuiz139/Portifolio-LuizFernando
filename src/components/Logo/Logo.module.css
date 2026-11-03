@@ -1,0 +1,63 @@
+.header,
+.rodape {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--c-text);
+}
+
+.rodape {
+  gap: var(--space-2);
+}
+
+.monograma {
+  flex: none;
+}
+
+.header .monograma {
+  width: 24px;
+  height: 24px;
+}
+
+.rodape .monograma {
+  width: 36px;
+  height: 36px;
+}
+
+.nome {
+  font-family: var(--f-display);
+  font-size: 18px;
+  font-weight: var(--fw-black);
+  letter-spacing: var(--ls-tight);
+  line-height: 1;
+}
+
+.rodape .nome small {
+  display: block;
+  margin-top: 6px;
+  color: var(--c-text-3);
+  font-family: var(--f-body);
+  font-size: 10px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+}
+
+.divisoria {
+  flex: none;
+  width: 1px;
+  height: 36px;
+  background-color: var(--c-line-2);
+}
+
+@media (min-width: 640px) {
+  .header .monograma {
+    width: 28px;
+    height: 28px;
+  }
+
+  .rodape .monograma {
+    width: 40px;
+    height: 40px;
+  }
+}
