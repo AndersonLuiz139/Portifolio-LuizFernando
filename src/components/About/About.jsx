@@ -12,8 +12,17 @@ export default function About() {
       <div className={`container ${styles.grade}`}>
         <header className={styles.cabecalho}>
           <SectionLabel numero={sobre.numero}>{sobre.rotulo}</SectionLabel>
-          <h2>{sobre.titulo}</h2>
+          <h2 className={styles.titulo}>{sobre.titulo}</h2>
         </header>
+
+        <figure className={styles.figura}>
+          <Picture
+            imagem={imagens.sobre}
+            proporcao="4 / 5"
+            sizes="(min-width: 1024px) 38vw, (min-width: 640px) 50vw, 90vw"
+          />
+          <figcaption>— {imagens.sobre.legenda}</figcaption>
+        </figure>
 
         <div className={styles.corpo}>
           <p className={styles.lead}>{sobre.lead}</p>
@@ -39,15 +48,6 @@ export default function About() {
             {expandido ? "Recolher biografia" : sobre.verMais}
           </button>
         </div>
-
-        <figure className={styles.figura}>
-          <Picture
-            imagem={imagens.sobre}
-            proporcao="4 / 5"
-            sizes="(min-width: 1024px) 32vw, (min-width: 640px) 50vw, 90vw"
-          />
-          <figcaption>— {imagens.sobre.legenda}</figcaption>
-        </figure>
 
         <dl className={styles.dados}>
           {sobre.dados.map((dado) => (
