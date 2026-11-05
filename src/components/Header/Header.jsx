@@ -1,18 +1,27 @@
 import { useEffect, useRef, useState } from "react";
 import { Close, Menu } from "../../assets/icons/index.jsx";
 import { links, navegacao } from "../../data/site.js";
+import useScrollSpy from "../../hooks/useScrollSpy.js";
 import Logo from "../Logo/Logo.jsx";
 import Button from "../ui/Button/Button.jsx";
 import styles from "./Header.module.css";
 
 const DESKTOP = "(min-width: 820px)";
 
+const SECOES = navegacao.flatMap((item) => [
+  item.id,
+  ...(item.tambemAtivaEm ?? []),
+]);
+
 export default function Header() {
   const [aberto, setAberto] = useState(false);
   const painelRef = useRef(null);
   const alternarRef = useRef(null);
+  const secaoAtiva = useScrollSpy(SECOES);
 
-  /* Quem abre o menu e gira o celular não fica com o painel preso aberto. */
+  const estaAtivo = (item) =>
+    item.id === secaoAtiva || item.tambemAtivaEm?.includes(secaoAtiva);
+
   useEffect(() => {
     const consulta = window.matchMedia(DESKTOP);
     const aoMudar = (evento) => evento.matches && setAberto(false);
@@ -37,7 +46,6 @@ export default function Header() {
 
       if (evento.key !== "Tab" || focaveis.length === 0) return;
 
-      /* Foco preso: o Tab circula dentro do painel. */
       if (evento.shiftKey && document.activeElement === primeiro) {
         evento.preventDefault();
         ultimo.focus();
@@ -65,7 +73,13 @@ export default function Header() {
           <ul className={styles.lista}>
             {navegacao.map((item) => (
               <li key={item.id}>
-                <a href={`#${item.id}`} className={styles.link}>
+                <a
+                  href={`#${item.id}`}
+                  className={[styles.link, estaAtivo(item) && styles.ativo]
+                    .filter(Boolean)
+                    .join(" ")}
+                  aria-current={estaAtivo(item) ? "true" : undefined}
+                >
                   {item.rotulo}
                 </a>
               </li>
@@ -106,6 +120,7 @@ export default function Header() {
                 <a
                   href={`#${item.id}`}
                   className={styles.linkPainel}
+                  aria-current={estaAtivo(item) ? "true" : undefined}
                   onClick={() => setAberto(false)}
                 >
                   {item.rotulo}

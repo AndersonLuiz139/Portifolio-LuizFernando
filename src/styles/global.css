@@ -119,6 +119,12 @@ html {
 
 :target,
 section[id] {
+  scroll-margin-top: calc(
+    var(--header-h) + var(--space-3) - var(--space-section)
+  );
+}
+
+#inicio {
   scroll-margin-top: var(--header-h);
 }
 
