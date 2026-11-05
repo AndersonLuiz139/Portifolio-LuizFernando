@@ -1,0 +1,180 @@
+.contato {
+  padding-block: var(--space-section);
+}
+
+.cartao {
+  display: grid;
+  gap: var(--space-6);
+  padding: var(--space-6) var(--space-4);
+  border-radius: var(--r-lg);
+  background-color: var(--c-blue-deep);
+}
+
+.topo,
+.base {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.textos {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+}
+
+.descricao {
+  max-width: var(--measure);
+  color: var(--c-text-2);
+}
+
+/* CTA do WhatsApp */
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 72px;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--r-md);
+  background-color: var(--c-text);
+  color: var(--c-bg);
+  font-family: var(--f-display);
+  font-weight: var(--fw-bold);
+  transition: background-color var(--t-fast) var(--ease);
+}
+
+.cta:hover {
+  background-color: var(--c-text-2);
+}
+
+.ctaIcone {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r-pill);
+  background-color: var(--c-blue-action);
+  color: var(--c-text);
+}
+
+.ctaTextos {
+  flex: 1;
+}
+
+.ctaTextos small {
+  display: block;
+  margin-top: 2px;
+  color: var(--c-line-2);
+  font-family: var(--f-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-regular);
+}
+
+.ctaSeta {
+  flex: none;
+  transition: translate var(--t-fast) var(--ease);
+}
+
+.cta:hover .ctaSeta {
+  translate: 4px 0;
+}
+
+/* Atalhos */
+
+.convite {
+  margin-bottom: var(--space-3);
+  color: var(--c-text-2);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+}
+
+.atalhosLista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.atalho {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--c-line-2);
+  border-radius: var(--r-pill);
+  color: var(--c-text);
+  font-size: 15px;
+  transition:
+    border-color var(--t-fast) var(--ease),
+    background-color var(--t-fast) var(--ease);
+}
+
+.atalho:hover {
+  border-color: var(--c-text-2);
+  background-color: rgb(255 255 255 / 0.06);
+}
+
+/* Redes e local */
+
+.redes {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+}
+
+.rede {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--c-text);
+  font-family: var(--f-display);
+  font-weight: var(--fw-bold);
+}
+
+.rede small {
+  color: var(--c-text-2);
+  font-family: var(--f-body);
+  font-weight: var(--fw-regular);
+}
+
+.rede:hover small {
+  color: var(--c-text);
+}
+
+.redeIcone {
+  color: var(--c-blue-soft);
+}
+
+.local {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--c-text-2);
+}
+
+@media (min-width: 1024px) {
+  .cartao {
+    gap: var(--space-8);
+    padding: var(--space-8);
+  }
+
+  .topo {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: var(--space-8);
+  }
+
+  .base {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+    gap: var(--space-6);
+  }
+
+  .redes {
+    padding-left: var(--space-6);
+    border-left: 1px dashed var(--c-line-2);
+  }
+}
