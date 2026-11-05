@@ -11,7 +11,7 @@ export default function Experience() {
   return (
     <section id={experiencia.id} className={styles.experiencia}>
       <div className={`container ${styles.grade}`}>
-        <header className={styles.cabecalho}>
+        <header className={styles.cabecalho} data-revelar>
           <SectionLabel numero={experiencia.numero}>
             {experiencia.rotulo}
           </SectionLabel>
@@ -23,7 +23,7 @@ export default function Experience() {
           </h2>
         </header>
 
-        <div className={styles.esquerda}>
+        <div className={styles.esquerda} data-revelar>
           <figure className={styles.figura}>
             <Picture
               imagem={imagens.experienciaPrincipal}
@@ -51,7 +51,7 @@ export default function Experience() {
           </div>
         </div>
 
-        <div className={styles.direita}>
+        <div className={styles.direita} data-revelar>
           <ol className={styles.etapas}>
             {experiencia.etapas.map((etapa) => (
               <li key={etapa.letra} className={styles.etapa}>

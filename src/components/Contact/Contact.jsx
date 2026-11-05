@@ -12,7 +12,7 @@ export default function Contact() {
   return (
     <section id={contato.id} className={styles.contato}>
       <div className="container">
-        <div className={styles.cartao}>
+        <div className={styles.cartao} data-revelar>
           <div className={styles.topo}>
             <div className={styles.textos}>
               <SectionLabel numero={contato.numero}>

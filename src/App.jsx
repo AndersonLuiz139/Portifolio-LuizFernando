@@ -5,8 +5,11 @@ import Experience from "./components/Experience/Experience.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Header from "./components/Header/Header.jsx";
 import Hero from "./components/Hero/Hero.jsx";
+import useReveal from "./hooks/useReveal.js";
 
 export default function App() {
+  useReveal();
+
   return (
     <>
       <Header />

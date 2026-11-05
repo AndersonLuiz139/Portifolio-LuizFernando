@@ -10,12 +10,12 @@ export default function About() {
   return (
     <section id={sobre.id} className={styles.sobre}>
       <div className={`container ${styles.grade}`}>
-        <header className={styles.cabecalho}>
+        <header className={styles.cabecalho} data-revelar>
           <SectionLabel numero={sobre.numero}>{sobre.rotulo}</SectionLabel>
           <h2 className={styles.titulo}>{sobre.titulo}</h2>
         </header>
 
-        <figure className={styles.figura}>
+        <figure className={styles.figura} data-revelar>
           <Picture
             imagem={imagens.sobre}
             proporcao="4 / 5"
@@ -24,7 +24,7 @@ export default function About() {
           <figcaption>— {imagens.sobre.legenda}</figcaption>
         </figure>
 
-        <div className={styles.corpo}>
+        <div className={styles.corpo} data-revelar>
           <p className={styles.lead}>{sobre.lead}</p>
 
           <div
@@ -49,7 +49,7 @@ export default function About() {
           </button>
         </div>
 
-        <dl className={styles.dados}>
+        <dl className={styles.dados} data-revelar>
           {sobre.dados.map((dado) => (
             <div key={dado.rotulo} className={styles.dado}>
               <dt>{dado.rotulo}</dt>
@@ -58,7 +58,7 @@ export default function About() {
           ))}
         </dl>
 
-        <blockquote className={styles.citacao}>
+        <blockquote className={styles.citacao} data-revelar>
           <p>“{sobre.citacao}”</p>
           <footer className={styles.assinatura}>
             <span className={styles.assinaturaNome}>{marca.nome}</span>

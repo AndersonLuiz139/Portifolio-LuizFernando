@@ -9,7 +9,7 @@ export default function Areas() {
   return (
     <section id={areas.id} className={styles.areas}>
       <div className="container">
-        <header className={styles.cabecalho}>
+        <header className={styles.cabecalho} data-revelar>
           <div className={styles.titulos}>
             <SectionLabel numero={areas.numero}>{areas.rotulo}</SectionLabel>
             <h2>{areas.titulo}</h2>
@@ -21,7 +21,7 @@ export default function Areas() {
           {areas.itens.map((item, indice) => {
             const Icone = ICONES[indice];
             return (
-              <li key={item.numero} className={styles.item}>
+              <li key={item.numero} className={styles.item} data-revelar>
                 <span className={styles.numero}>{item.numero}</span>
                 <Icone size={24} className={styles.icone} />
                 <h3 className={styles.nome}>{item.titulo}</h3>

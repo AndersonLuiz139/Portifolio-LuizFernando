@@ -13,12 +13,16 @@ export default function Picture({
   zoom,
   prioridade = false,
   className,
+  ...props
 }) {
   const { nome, larguras, alt, posicao } = imagem;
   const maior = larguras[larguras.length - 1];
 
   return (
-    <picture className={[styles.picture, className].filter(Boolean).join(" ")}>
+    <picture
+      className={[styles.picture, className].filter(Boolean).join(" ")}
+      {...props}
+    >
       <source
         type="image/webp"
         srcSet={srcset(nome, larguras, "webp")}

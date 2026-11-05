@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section id={hero.id} className={styles.hero}>
       <div className={`container ${styles.grade}`}>
-        <div className={styles.texto}>
+        <div className={styles.texto} data-revelar>
           <p className={styles.eyebrow}>
             <span className={styles.longo}>{hero.eyebrow}</span>
             <span className={styles.curto}>{hero.eyebrowCurto}</span>
@@ -42,6 +42,7 @@ export default function Hero() {
 
         <Picture
           className={styles.foto}
+          data-revelar
           imagem={imagens.hero}
           proporcao="4 / 5"
           zoom={1.12}
