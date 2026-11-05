@@ -73,6 +73,7 @@ export const hero = {
   eyebrow: "Estudante de Educação Física · Timbaúba — PE",
   eyebrowCurto: "Estudante de Ed. Física · Timbaúba — PE",
   titulo: ["Treine com propósito.", "Evolua com consistência."],
+  destaque: ["propósito", "consistência"],
   descricao:
     "Estudante de Educação Física, com foco no treinamento físico, no desenvolvimento das capacidades físicas e na evolução por meio do movimento.",
   acaoPrimaria: "Falar pelo WhatsApp",

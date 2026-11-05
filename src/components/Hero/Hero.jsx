@@ -4,6 +4,20 @@ import Button from "../ui/Button/Button.jsx";
 import Picture from "../ui/Picture/Picture.jsx";
 import styles from "./Hero.module.css";
 
+function comDestaque(linha, destaques) {
+  const alvo = destaques.find((palavra) => linha.includes(palavra));
+  if (!alvo) return linha;
+
+  const [antes, depois] = linha.split(alvo);
+  return (
+    <>
+      {antes}
+      <span className={styles.destaque}>{alvo}</span>
+      {depois}
+    </>
+  );
+}
+
 export default function Hero() {
   return (
     <section id={hero.id} className={styles.hero}>
@@ -16,7 +30,7 @@ export default function Hero() {
 
           <h1 className={styles.titulo}>
             {hero.titulo.map((linha) => (
-              <span key={linha}>{linha}</span>
+              <span key={linha}>{comDestaque(linha, hero.destaque)}</span>
             ))}
           </h1>
 
@@ -27,12 +41,11 @@ export default function Hero() {
               href={links.whatsapp.padrao}
               externo
               icone={Whatsapp}
-              seta
               aria-label={links.whatsapp.rotuloAcessivel}
             >
               {hero.acaoPrimaria}
             </Button>
-            <Button variante="secundaria" href="#sobre">
+            <Button variante="secundaria" href="#sobre" seta="baixo">
               {hero.acaoSecundaria}
             </Button>
           </div>

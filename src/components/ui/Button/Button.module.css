@@ -63,10 +63,15 @@
 
 /* Seta */
 
-.seta {
+.seta,
+.setaBaixo {
   transition: translate var(--t-fast) var(--ease);
 }
 
 .botao:hover .seta {
   translate: 4px 0;
+}
+
+.botao:hover .setaBaixo {
+  translate: 0 3px;
 }

@@ -29,6 +29,10 @@
   display: grid;
 }
 
+.destaque {
+  color: var(--c-blue);
+}
+
 .descricao {
   max-width: var(--measure);
   font-size: var(--fs-lead);

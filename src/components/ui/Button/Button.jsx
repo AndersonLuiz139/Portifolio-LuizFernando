@@ -1,4 +1,4 @@
-import { ArrowRight } from "../../../assets/icons/index.jsx";
+import { ArrowDown, ArrowRight } from "../../../assets/icons/index.jsx";
 import { linkExterno } from "../../../data/site.js";
 import styles from "./Button.module.css";
 
@@ -17,11 +17,19 @@ export default function Button({
     .filter(Boolean)
     .join(" ");
 
+  const paraBaixo = seta === "baixo";
+  const Seta = paraBaixo ? ArrowDown : ArrowRight;
+
   const conteudo = (
     <>
       {Icone && <Icone size={20} />}
       <span>{children}</span>
-      {seta && <ArrowRight size={20} className={styles.seta} />}
+      {seta && (
+        <Seta
+          size={20}
+          className={paraBaixo ? styles.setaBaixo : styles.seta}
+        />
+      )}
     </>
   );
 
