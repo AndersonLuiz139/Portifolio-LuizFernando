@@ -2,21 +2,8 @@ import { Whatsapp } from "../../assets/icons/index.jsx";
 import { hero, imagens, links } from "../../data/site.js";
 import Button from "../ui/Button/Button.jsx";
 import Picture from "../ui/Picture/Picture.jsx";
+import Realce from "../ui/Realce/Realce.jsx";
 import styles from "./Hero.module.css";
-
-function comDestaque(linha, destaques) {
-  const alvo = destaques.find((palavra) => linha.includes(palavra));
-  if (!alvo) return linha;
-
-  const [antes, depois] = linha.split(alvo);
-  return (
-    <>
-      {antes}
-      <span className={styles.destaque}>{alvo}</span>
-      {depois}
-    </>
-  );
-}
 
 export default function Hero() {
   return (
@@ -30,7 +17,9 @@ export default function Hero() {
 
           <h1 className={styles.titulo}>
             {hero.titulo.map((linha) => (
-              <span key={linha}>{comDestaque(linha, hero.destaque)}</span>
+              <span key={linha}>
+                <Realce texto={linha} palavras={hero.destaque} />
+              </span>
             ))}
           </h1>
 

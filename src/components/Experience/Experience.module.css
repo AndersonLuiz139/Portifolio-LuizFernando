@@ -1,0 +1,148 @@
+.experiencia {
+  padding-block: var(--space-section);
+}
+
+.grade {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.cabecalho {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+}
+
+.esquerda,
+.direita {
+  display: grid;
+  gap: var(--space-6);
+  align-content: start;
+}
+
+/* Foto principal */
+
+.figura {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.figura figcaption {
+  color: var(--c-text-3);
+  font-size: var(--fs-eyebrow);
+}
+
+/* Locais */
+
+.locais {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-lg);
+  background-color: var(--c-surface);
+}
+
+.locaisRotulo {
+  color: var(--c-text-3);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+}
+
+.locaisDescricao {
+  color: var(--c-text-2);
+}
+
+.locaisLista {
+  display: grid;
+}
+
+.local {
+  display: flex;
+  align-items: start;
+  gap: var(--space-2);
+  padding-block: var(--space-3);
+  border-top: 1px solid var(--c-line);
+  color: var(--c-text);
+  font-family: var(--f-display);
+  font-weight: var(--fw-bold);
+}
+
+.local:last-child {
+  padding-bottom: 0;
+}
+
+.pin {
+  flex: none;
+  color: var(--c-blue);
+}
+
+.local small {
+  display: block;
+  margin-top: 2px;
+  color: var(--c-text-3);
+  font-family: var(--f-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-regular);
+}
+
+/* Etapas */
+
+.etapas {
+  display: grid;
+}
+
+.etapa {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-1) var(--space-3);
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--c-line);
+}
+
+.etapa:last-child {
+  border-bottom: 1px solid var(--c-line);
+}
+
+.letra {
+  grid-row: span 2;
+  color: var(--c-blue);
+  font-family: var(--f-display);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-black);
+  line-height: 1.2;
+}
+
+.etapaTexto {
+  color: var(--c-text-3);
+}
+
+@media (min-width: 1024px) {
+  .grade {
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: var(--space-8);
+    row-gap: var(--space-8);
+  }
+
+  .cabecalho {
+    grid-column: 1 / -1;
+  }
+
+  .esquerda {
+    grid-column: span 5;
+  }
+
+  .direita {
+    grid-column: span 7;
+  }
+
+  .locais {
+    padding: var(--space-6);
+  }
+
+  .apoio {
+    max-width: 72%;
+  }
+}

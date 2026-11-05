@@ -135,6 +135,7 @@ export const experiencia = {
   numero: "03",
   rotulo: "Experiência e movimento",
   titulo: "Aprender, praticar, evoluir.",
+  destaque: ["evoluir"],
   etapas: [
     {
       letra: "A",

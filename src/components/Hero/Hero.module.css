@@ -29,10 +29,6 @@
   display: grid;
 }
 
-.destaque {
-  color: var(--c-blue);
-}
-
 .descricao {
   max-width: var(--measure);
   font-size: var(--fs-lead);
@@ -57,7 +53,6 @@
   transform-origin: 28% 16%;
 }
 
-/* Degradê na base: apaga as anilhas do primeiro plano. */
 .foto::after {
   content: "";
   position: absolute;
