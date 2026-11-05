@@ -1,0 +1,54 @@
+.rodape {
+  padding-block: var(--space-6);
+  border-top: 1px solid var(--c-line);
+}
+
+.conteudo {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.marca {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.descricao {
+  color: var(--c-text-3);
+}
+
+.direita {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.redes {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.redes a {
+  color: var(--c-text-2);
+  transition: color var(--t-fast) var(--ease);
+}
+
+.redes a:hover {
+  color: var(--c-text);
+}
+
+.direitos {
+  color: var(--c-text-3);
+}
+
+@media (min-width: 1024px) {
+  .conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+  }
+}
