@@ -1,4 +1,5 @@
 import About from "./components/About/About.jsx";
+import Areas from "./components/Areas/Areas.jsx";
 import Header from "./components/Header/Header.jsx";
 import Hero from "./components/Hero/Hero.jsx";
 
@@ -9,6 +10,7 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <Areas />
       </main>
     </>
   );
