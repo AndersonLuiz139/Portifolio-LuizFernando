@@ -17,6 +17,22 @@ async function kb(arquivo) {
   return Math.round(size / 1024);
 }
 
+async function gerarCompartilhamento() {
+  const origem = path.join(ORIGEM, "luiz-corda-naval.jpg");
+  const { width } = await sharp(origem).metadata();
+  const altura = Math.round(width / 1.91);
+  const destino = path.join(DESTINO, "compartilhamento.jpg");
+
+  await sharp(origem)
+    .resize(width, altura, { fit: "cover", position: "top" })
+    .jpeg({ quality: 85, mozjpeg: true })
+    .toFile(destino);
+
+  console.log(
+    `compartilhamento ${width}x${altura} · ${await kb(destino)} kB\n`,
+  );
+}
+
 const arquivos = (await readdir(ORIGEM)).filter((a) => a.endsWith(".jpg"));
 
 for (const arquivo of arquivos) {
@@ -43,3 +59,5 @@ for (const arquivo of arquivos) {
 
   console.log(`${nome} original ${width}w · ${await kb(origem)} kB\n`);
 }
+
+await gerarCompartilhamento();
