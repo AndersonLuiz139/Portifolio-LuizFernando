@@ -3,7 +3,7 @@
 Site de uma página para Luiz Fernando, estudante de Educação Física em
 Timbaúba — PE.
 
-**No ar:** https://portifolio-luiz-fernando-zeta.vercel.app
+**No ar:** https://luizfernando-edfisica.vercel.app
 
 ## Tecnologias
 
