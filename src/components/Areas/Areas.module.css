@@ -36,7 +36,8 @@
 }
 
 .numero {
-  color: var(--c-blue);
+  /* azul claro: o de marca sobre --c-surface dá 4.41:1, abaixo do mínimo */
+  color: var(--c-blue-soft);
   font-size: var(--fs-eyebrow);
   font-weight: var(--fw-semibold);
   letter-spacing: var(--ls-eyebrow);

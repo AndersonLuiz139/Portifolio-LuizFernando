@@ -3,6 +3,9 @@
 }
 
 .cartao {
+  /* sobre o azul escuro o tom de apoio cai para 4.43:1 */
+  --rotulo-cor: var(--c-text-2);
+
   display: grid;
   gap: var(--space-6);
   padding: var(--space-6) var(--space-4);
